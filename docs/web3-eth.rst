@@ -410,7 +410,6 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-getaccounts:
 
 getAccounts
 =====================
@@ -419,10 +418,7 @@ getAccounts
 
     web3.eth.getAccounts([callback])
 
-Returns a list of accounts the node controls by using the provider and calling
-the RPC method ``eth_accounts``. Using :ref:`web3.eth.accounts.create() <accounts-create>`
-will not add accounts into this list. For that use
-:ref:`web3.eth.personal.newAccount() <personal-newaccount>`.
+Returns a list of accounts the node controls.
 
 -------
 Returns
