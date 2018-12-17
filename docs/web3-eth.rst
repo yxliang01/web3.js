@@ -394,7 +394,7 @@ Returns
 
 ``Promise`` returns ``String`` - Number string of the current gas price in :ref:`wei <what-is-wei>`.
 
-See the :ref:`A note on dealing with big numbers in JavaScript <utils-bn>`.
+See the :ref:`A note on dealing with big numbers in JavaScript <big-numbers-in-javascript>`.
 
 -------
 Example
