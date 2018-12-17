@@ -31,16 +31,13 @@ var https = require('https');
 /**
  * HttpProvider should be used to send rpc calls over http
  */
-var HttpProvider = function HttpProvider(host, options = {}) {
-    const keepAlive =
-        (options.keepAlive === true || options.keepAlive !== false) ?
-            true :
-            false;
+var HttpProvider = function HttpProvider(host, options) {
+    options = options || {};
     this.host = host || 'http://localhost:8545';
-    if (this.host.substring(0,5) === "https") {
-        this.httpsAgent = new https.Agent({ keepAlive });
+    if (this.host.substring(0,5) === "https"){
+        this.httpsAgent = new https.Agent({ keepAlive: true });
     }else{
-        this.httpAgent = new http.Agent({ keepAlive });
+        this.httpAgent = new http.Agent({ keepAlive: true });
     }
     this.timeout = options.timeout || 0;
     this.headers = options.headers;
